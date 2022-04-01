@@ -1,0 +1,3 @@
+Minh Pham
+I plan to use Kali to examine security issues on such broken Linux distribution, for educational purposes of cs338 at Carleton College.
+Kali has been successfully installed in VMWare on my Windows 10 local machine.
