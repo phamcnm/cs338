@@ -1,0 +1,38 @@
+Minh Pham
+
+What's your computer's IP address for its current Internet connection? (0-point bonus: how can you tell the difference between your Ethernet IP and your wireless IP if you have both connections active?)
+How can you determine the IP address associated with a given host name?
+How can you determine the host name(s) associated with a given IP address?
+How can you copy a file from one computer to another? Or more to the point, if you create a file on the Kali virtual machine and you want to put it someplace where you can save it, like your your account on mantis.mathcs.carleton.edu, how do you go about it from the Kali command-line interface?
+How can you tell whether there's a process listening on a given port (e.g. port 80 or port 22) on a given host?
+How can you tell which ports have processes listening on them on a given host?
+How can you retrieve and save a given web page (say https://google.com/ or https://carleton.edu/) in a file on your system?
+How can you view the HTTP headers sent back from a specified web server when you request one of its pages?
+How can you view the HTTP headers that your computer sends to the web server when you do the tasks in the previous two questions?
+
+1. My computer's IP address is 137.22.90.27
+command on windows: nslookup myip.opendns.com resolver1.opendns.com
+source: https://www.avast.com/c-how-to-find-ip-address
+2. Use the command nslookup [hostname]
+for example on windows: nslookup ns1.carleton.edu returns 137.22.198.41
+source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/
+3. Use the command nslookup [address]
+for example on windows: nslookup 137.22.198.41 returns ns1.carleton.edu
+source: https://www.dotcom-monitor.com/wiki/knowledge-base/target-hostname-or-ip-address/
+4. Use scp: scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2
+source: https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/
+5. To tell whether there's a process listening on a given port like 80, use command
+lsof -i :80
+source: https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
+6. To tell which ports have processes listening, use command
+sudo netstat -tunlp
+source: https://linuxize.com/post/check-listening-ports-linux/
+7. Use wget [webpage] -O [text-file]
+wget "https://carleton.edu/" -O file.txt
+source: https://unix.stackexchange.com/questions/12352/how-to-make-wget-save-the-web-page-contents-to-a-file
+8. Use curl
+curl -v http://google.com
+source: https://mkyong.com/web/curl-display-request-headers-and-response-headers
+9. Use curl
+curl -s -D - -o /dev/null http://google.com
+source: https://stackoverflow.com/questions/3252851/how-to-display-request-headers-with-command-line-curl
