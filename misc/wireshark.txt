@@ -1,0 +1,59 @@
+Minh Pham
+
+===== DAYTIME =====
+1. frame 1,2,3,5,6
+1	192.168.246.128		129.6.15.28		TCP		[SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=3083025242 TSecr=0 WS=128
+2	129.6.15.28 	192.168.246.128		TCP		[SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460
+3	192.168.246.128		129.6.15.28 	TCP		[ACK] Seq=1 Ack=1 Win=64240 Len=0
+5	192.168.246.128 	129.6.15.28 	TCP		[FIN, ACK] Seq=1 Ack=53 Win=64188 Len=0
+6	129.6.15.28		192.168.246.128		TCP		[ACK] Seq=53 Ack=2 Win=64239 Len=0
+
+The client needs a port for the server to handle the traffic and know which application to send to.
+
+2. Client port: 40800
+
+3. frame 4
+4	129.6.15.28		192.168.246.128		DAYTIME		DAYTIME Response
+
+4. Flags show what are the flags being set as, for example for frame 4 it says ACK is set and SYN is not set
+Window: 64240
+[Calculated window size: 64240]
+[Window size scaling factor: -2 (no window scaling used)]
+Checksum: 0x0a82 [unverified]
+[Checksum Status: Unverified]
+Urgent Pointer: 0
+Timestamps to show the time the first frame of this TCP stream came, and the previous frame.
+Seq and ACK analysis to analyze the Seq and ACK
+TCP payload (51 bytes)
+
+The DAYTIME response shows the result (day time hours) sent from the server along with the information it's 0.0 UTC(NIST)
+
+5. [SYN] stands for synchronization, the source trying to establish a connection with the dest.
+
+6. [ACK] stands for acknowledgement, responding to SYN.
+
+7. [FIN] stands for finished, terminating the connection.
+
+8. the nc client initiated the closing of connection, as seen in frame 5 where the source is the nc client and the data has the [FIN] tag.
+
+===== HTTP =====
+1. 3 connections were open
+
+2. The homepage file is requested in frame 28 where it says
+28 	192.168.246.128 	45.79.89.123	HTTP	GET /index.html HTTP/1.1 
+the GET /index.html means requesting the page with the HTTP protocol
+
+3. The JPG file is requested in frame 32 where it says
+32	192.168.246.128		45.79.89.123	HTTP	GET /jeff_square_head.jpg HTTP/1.1 
+the GET /index.html means requesting the JPEG with the HTTP protocol
+
+===== QUESTIONS =====
+- What is "window"?
+- In the HTTP part, a big chunk of the frames got highlighted in purple, and one got highlighted in red, a few got highlighted in grey, what does that mean?
+- What is SEQ/ACK analysis?
+- How do you best read this kind of things below?
+0000   00 50 56 e2 ad f1 00 0c 29 dc 4d 73 08 00 45 00   .PV.....).Ms..E.
+0010   00 3c 2f 50 40 00 40 06 cd 78 c0 a8 f6 80 2d 4f   .</P@.@..x....-O
+0020   59 7b dc 5c 00 50 97 fe 31 8e 00 00 00 00 a0 02   Y{.\.P..1.......
+0030   fa f0 3e 22 00 00 02 04 05 b4 04 02 08 0a 49 d6   ..>"..........I.
+0040   99 01 00 00 00 00 01 03 03 07                     ..........
