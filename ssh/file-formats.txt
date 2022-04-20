@@ -1,0 +1,200 @@
+Minh Pham
+
+======== PRIVATE KEY ========
+
+Contents of id_rsa_homework:
+
+-----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----
+
+
+Items expected in the file, according to the Appendix of RFC 8017, are a version number (0 or 1) and 8 other integers used for cryptography purpose. An extra optional prime infos is included if version number = 1. Particularly, the file needs to contain these items (with the meaning of the number in square bracket):
+SEQUENCE
+	version 	[the version number, 0 if multi-primed is not used, 1 otherwise]
+	INTEGER 	[modulus, which is the RSA modulus n]
+	INTEGER 	[publicExponent, which is the RSA public exponent e]
+	INTEGER		[privateExponent, which is the RSA private exponent d]
+	INTEGER		[prime1, which is the prime factor p of n]
+	INTEGER		[prime2, which is the prime factor q of n]
+	INTEGER		[exponent1, which is d mod (p - 1)]
+	INTEGER		[exponent2, which is d mod (q - 1)]
+	INTEGER		[coefficient, which is the CRT coefficient q^(-1) mod p]
+	Optional 	[Other prime infos for multi primes usage, included if version = 1]
+ 
+Using Lapo Luchini's ASN.1 decoder, we get the following:
+
+SEQUENCE (9 elem)
+  INTEGER 0
+  INTEGER (3072 bit) 434690944477875165150159121761646368248255453894369426232827198260317…
+  INTEGER 65537
+  INTEGER (3072 bit) 337521065835263035064103441248224647772235153917981857465399356666810…
+  INTEGER (1536 bit) 215987990905333243231767422393559386226926259033012066547022037272707…
+  INTEGER (1536 bit) 201256997046839811118730201759472407342160382888457556523439686387544…
+  INTEGER (1535 bit) 826355018380506544515821039885272144018485591191806850572963450047432…
+  INTEGER (1532 bit) 141445249004034998552401133604548561609165925139117674801556860323333…
+  INTEGER (1535 bit) 100597801636266224333982543192932704283881000179019424573107370830437…
+
+Using OSS Nokalva's ASN.1 Playground, choosing "decode", DATA = "HEX or BASE64", encoding scheme = "DER". We get the following:
+
+30 8206E3(1763)
+  02 01 00
+  02 820181(385) 00BF8BDD881D0E60F8A67A6E0C682C0EC4DC8C6CE66CE8FD6B20AAA8683E...
+  02 03 010001
+  02 820181(385) 0094BA7E55FCF1B83BF9D0207903BE09EDB3AE59B485A657778212E0D6A8...
+  02 81C1(193) 00E566C7E6FAA811D1B9C382D85751749EF679261755A70230BCF07CA84CB0...
+  02 81C1(193) 00D5C172A1341F5F69FB06D9A4C6B1F63B6996878B9A28ABE08752A2487475...
+  02 81C0(192) 57C47523082F9971B632F932B065B7CAC1DE2416B56C8A47FF61BB2FE0F763...
+  02 81C0(192) 0F05DF8690E13B95793D0C02D6AC1F4021B5A0A5211A86A9EB18D5AAFDF460...
+  02 81C0(192) 6AD860A0BF54366A835CD022F358AC1C38659A567F04542799CF2510ECE025...
+
+Using Michael Holtstrom's ASN.1 decoder, choosing "BASE64/PEM to ASN.1". We get the following:
+
+SEQUENCE {
+   INTEGER 0x00 (0 decimal)
+   INTEGER 0x00bf8bdd881d0e60f8a67a6e0c682c0ec4dc8c6ce66ce8fd6b20aaa8683e...
+   INTEGER 0x010001 (65537 decimal)
+   INTEGER 0x0094ba7e55fcf1b83bf9d0207903be09edb3ae59b485a657778212e0d6a8...
+   INTEGER 0x00e566c7e6faa811d1b9c382d85751749ef679261755a70230bcf07ca84cb0...
+   INTEGER 0x00d5c172a1341f5f69fb06d9a4c6b1f63b6996878b9a28abe08752a2487475...
+   INTEGER 0x57c47523082f9971b632f932b065b7cac1de2416b56c8a47ff61bb2fe0f763...
+   INTEGER 0x0f05df8690e13b95793d0c02d6ac1f4021b5a0a5211a86a9eb18d5aafdf460...
+   INTEGER 0x6ad860a0bf54366a835cd022f358ac1c38659a567f04542799cf2510ece025...
+}
+
+The Holtstrom decoding shows the whole number for every hex, but I have already shorted it by replacing the long end with ... to increase readability.
+
+As we have seen we need 9 items, and indeed there are 9 integers in the decoded key, corresponding to 9 shown above with their meanings explained, with the first one being the verion 0. 
+
+The values of the integers are best shown in the Michael Holtstrom's decoded key, in heximal. The values of the integers are in decimal in the OSS Nokalva's ASN.1 Playground decoded key. The numbers are really large except the version number, which is 0 in decimal, and the public exponent, which is 65537 in decimal.
+
+This table shows the summary of the 9 integers.
+
+    Function          value         Offsets   Length    DER
+1   version number    0x00          4         2+1       02 01 00 
+2   modulus           0x00bf8b..    7         4+385     02 82 01 .. B9 39
+3   publicExponent    0x010001      396       2+3       02 03 01 00 01
+4   privateExponent   0x0094ba..    401       4+385     02 82 01 .. 40 31
+5   prime1            0x00e566..    790       3+193     02 81 C1 .. 34 CD
+6   prime2            0x00d5c1..    986       3+193     02 81 C1 .. B6 1D
+7   exponent1         0x57c475..    1182      3+192     02 81 C0 .. 34 D9
+8   exponent2         0x0f05df..    1337      3+192     02 81 C0 .. 8B C9
+9   coefficient       0x6ad860..    1572      3+192     02 81 C0 .. E7 47
+
+The first byte in every DER encoding of the integer is 02 which encodes INTEGER.
+The second byte is the length in hex of value that follows.
+The rest is the value.
+
+
+======== PUBLIC KEY ========
+
+Contents of id_rsa_homework.pub:
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/i92IHQ5g+KZ6bgxoLA7E3Ixs5mzo/WsgqqhoPv2Sr50PE35s00uFARI7RTitlH694gBx+HiaHpWsZ93r2dnl75MMR3QAFLoBoEk0sBa6uGsdNScdpqX8OxEGpLkN10j32NN2M+6fLLgURWSsk3FIkjLOdCL9hOJd1/ADsgHjMuxHabpBKwPGWbFefBQpoJWpp44iytZ+JlNSpY7L2MNFje5ADEoGbRLr5yX4DwRCx9KQQQruczQO1oBJdWEKqDdF73xMlulr0/VBXnU5A37jazNSHXc5S1XcfLQBCK4abqxYtpXUNGY9hiZ/EQJ31n1UUTaDst0z1BcmXDUcwGKt8tAhFtR9mUpc+PTWQ5Wh4lNHvyNhTdyLRWCrgtSWILXBuZy9SPxcB9QKBvoqrt0JWqu+/JTBzljER3yiVTBc5FoaKjtCNtJULpG40Dqk029Yf56r0sqrh2Zz0CIJAmoXE+59YFlPWHgf1qC/uSWh0/WT7IWd8bG3B1SlP/MJuTk= user@host
+
+This file has the format ALGORITHM KEY COMMENT where the ALGORITHM is ssh-rsa and the COMMENT is user@host. The KEY is everything in between, in base64.
+
+Using the command to get the hex of the file:
+
+  cat id_rsa_homework.pub | cut -d " " -f2 | base64 -d | hexdump -ve '/1 "%02x "' -e '2/8 "\n"'
+
+The result is 10 + 16 * 23 + 7
+
+00 00 00 07 73 73 68 2d 72 73 61 00 00 00 03 01
+00 01 00 00 01 81 00 bf 8b dd 88 1d 0e 60 f8 a6
+7a 6e 0c 68 2c 0e c4 dc 8c 6c e6 6c e8 fd 6b 20
+aa a8 68 3e fd 92 af 9d 0f 13 7e 6c d3 4b 85 01
+12 3b 45 38 ad 94 7e bd e2 00 71 f8 78 9a 1e 95
+ac 67 dd eb d9 d9 e5 ef 93 0c 47 74 00 14 ba 01
+a0 49 34 b0 16 ba b8 6b 1d 35 27 1d a6 a5 fc 3b
+11 06 a4 b9 0d d7 48 f7 d8 d3 76 33 ee 9f 2c b8
+14 45 64 ac 93 71 48 92 32 ce 74 22 fd 84 e2 5d
+d7 f0 03 b2 01 e3 32 ec 47 69 ba 41 2b 03 c6 59
+b1 5e 7c 14 29 a0 95 a9 a7 8e 22 ca d6 7e 26 53
+52 a5 8e cb d8 c3 45 8d ee 40 0c 4a 06 6d 12 eb
+e7 25 f8 0f 04 42 c7 d2 90 41 0a ee 73 34 0e d6
+80 49 75 61 0a a8 37 45 ef 7c 4c 96 e9 6b d3 f5
+41 5e 75 39 03 7e e3 6b 33 52 1d 77 39 4b 55 dc
+7c b4 01 08 ae 1a 6e ac 58 b6 95 d4 34 66 3d 86
+26 7f 11 02 77 d6 7d 54 51 36 83 b2 dd 33 d4 17
+26 5c 35 1c c0 62 ad f2 d0 21 16 d4 7d 99 4a 5c
+f8 f4 d6 43 95 a1 e2 53 47 bf 23 61 4d dc 8b 45
+60 ab 82 d4 96 20 b5 c1 b9 9c bd 48 fc 5c 07 d4
+0a 06 fa 2a ae dd 09 5a ab be fc 94 c1 ce 58 c4
+47 7c a2 55 30 5c e4 5a 1a 2a 3b 42 36 d2 54 2e
+91 b8 d0 3a a4 d3 6f 58 7f 9e ab d2 ca ab 87 66
+73 d0 22 09 02 6a 17 13 ee 7d 60 59 4f 58 78 1f
+d6 a0 bf b9 25 a1 d3 f5 93 ec 85 9d f1 b1 b7 07
+54 a5 3f f3 09 b9 39
+
+From top to bottom, 
+first 4 bytes       00 00 00 07             = 7           = Length of "ssh-rsa"
+next 7 bytes        73 73 68 2d 72 73 61    = "ssh-rsa"
+next 4 bytes        00 00 00 03             = 3           = Length of exponent
+next 3 bytes        01 00 01                = 65537       = The exponent
+next 4 bytes        00 00 01 81             = 385         = Length of modulus
+rest 385 bytes      00 bf 8b .. b9 39                     = The key modulus
+
+
+======== SANITY CHECK ========
+The key modulus in the private key is the same key modulus in the public key. The public exponent in the private key is the same exponent in the public key. That's what we want to see.
+
+Run this python script to see a few other relations checked out:
+
+import math
+p = 0x00e566c7e6faa811d1b9c382d85751749ef679261755a70230bcf07ca84cb0399f47f33e3010c5eadce6647296f43f5fe020c5a0bd09407b623956e78d4af74911b6e59ed60081d6f5f2602256bb8a2adb40e8323c0f087ca0722fd94217e087bf6e8bdb4b2aa23c1609537f88b3dc1494e747b11fa39f155c668194689aeedc8a4cb95914b0d2ede8a580628c63911a931a4e64822ed6c00ff269b4a8909b332b108b237393312944c4b768cd3907017c9cbbcfbaa84d01bd43ce3bf1505934cd
+q = 0x00d5c172a1341f5f69fb06d9a4c6b1f63b6996878b9a28abe08752a2487475b8f1727d2ab5f00ae90cfa869612af4b5869a877e72d6ce010c619f7924aa3377d737ad3dd6f8f530da2d07dd25614f700052a7c290e677103c402107f6a164e925435fc7cc0220f2fef05d809206c78842a86345647bb3697722940b5771a5f94cbfad00224851e352372795d1ef35ea7348c60d5e1fd5cbb25226eeccd5f5b08166354ac747e1b95f6b1579692892a2be8c7da2f22bb0711a2183c7a4e5af9b61d
+d = 0x0094ba7e55fcf1b83bf9d0207903be09edb3ae59b485a657778212e0d6a8ea6da66c5653759bfc68ac2a8bc477d82d779afdc7693f1586576d1e1c933dceaf063132d7c3f60b4d30cac90e732934fd4118871b53b53ea1b24a6a76aae8e643a80121693bb0915c5c3df5e4cf88ff333107ff74f1b75d9fea397652802bee60e6d01884cec46f6b7defda9f0d555cb681d913b56579007491d922638ee794c287c50f128aaac023c337a8f27f19e057179f5e90e1e0220c53c49dab58de8a6e22f40800f5c1127627c56670c197ab276167303e09ad964d5c6ef19fec6d8a8d5f1f47817028f10364900c41628b9b3a9473c32e9228abef7465bb987a4c8e2743d0a534f6df02e7d7fdfb41b1db7d5ecb95303ff0bc728257d75014401e2970dfc6aad2219bede1260190698e3d50c38c38b6b191638b4e0130f5dce2f01a02eacb13015bab246a4b52b73063a4d0263d422fa036ed279e4747f3d381e6e14003719e69272ab9074382c5f59b090f90fa830b940f9fcb7bad82371f1e33e27b4031
+e = 0x010001
+l = math.lcm(p-1,q-1)
+math.gcd(e,l) # wants to be 1
+e*d%l # wants to be 1
+
+e1 = 0x57c47523082f9971b632f932b065b7cac1de2416b56c8a47ff61bb2fe0f763746f60bf2040aa986b1fb2baacca921caa719f6b1a281a059ad4f94cea200e706458a78d97aee5fe4a670b24d82e3474a5223634520a26631837d7dab590d114dec6fab75210e3b53d71200321583f1198cecbfd166fd183a8b0874f329e6458f888d63920d36e401bcc864c2e0e420bfad00bc22494ab111c88d0ac8ff9938786287433821a84aa9766f40d22c778c8b6d6787cc79b70ab03b0978d138c7c34d9
+e1 - d%(p-1) # wants to be 0
+
+e2 = 0x0f05df8690e13b95793d0c02d6ac1f4021b5a0a5211a86a9eb18d5aafdf460212808bffdb5772ed5e8ad98d28b5b62455abfc291a0bb46b28594aec56c1f3443ef7800721cc29b8cbbd67bf7ecd5473d15b5503560f3c26dfe2f26a550180994bd8e973df1a6db9992f19202a35cfcfcf81da98ab50fab292cd90d67e7849c3291d818ae7464a11b72aa30ef41ef7f14e460d1e76625244a01d785f1112896b2ec1c415a969a5db9ced0f7162969bb584ae37cb896287306cf6940b74d118bc9
+e2 - d%(q-1) # wants to be 0
+
+Explanation: 
+We find e, the public exponent to be 65537 and d, the private exponent from the private key. Then we find p and q from the private key. To get lambda(n), we calculate l = lambda(n) = math.lcm(p-1,q-1). It checks out that e*d mod l = 1.
+We get e1 from the private key. It should be the case that e1 = d mod (p-1). And that checks out.
+Similarly, we get d2 from the private key. And it is also the case that e2 = d mod (q-1).
+
+
