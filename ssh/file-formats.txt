@@ -2,6 +2,7 @@ Minh Pham
 
 ======== PRIVATE KEY ========
 
+1)
 Contents of id_rsa_homework:
 
 -----BEGIN RSA PRIVATE KEY-----
@@ -44,7 +45,7 @@ aUKuOboLmCTmgiqv48/no61LE4zGLSINLbQ1PUE7D9WP2KCehCzBIVk8S29DCrFI
 hkd0xbQL0amd8HipzLDhw34PvpWSxl7UO5M1jvZ7nzwTtVXi0+dH
 -----END RSA PRIVATE KEY-----
 
-
+3)
 Items expected in the file, according to the Appendix of RFC 8017, are a version number (0 or 1) and 8 other integers used for cryptography purpose. An extra optional prime infos is included if version number = 1. Particularly, the file needs to contain these items (with the meaning of the number in square bracket):
 SEQUENCE
 	version 	[the version number, 0 if multi-primed is not used, 1 otherwise]
@@ -58,6 +59,7 @@ SEQUENCE
 	INTEGER		[coefficient, which is the CRT coefficient q^(-1) mod p]
 	Optional 	[Other prime infos for multi primes usage, included if version = 1]
  
+4)
 Using Lapo Luchini's ASN.1 decoder, we get the following:
 
 SEQUENCE (9 elem)
@@ -100,10 +102,14 @@ SEQUENCE {
 
 The Holtstrom decoding shows the whole number for every hex, but I have already shorted it by replacing the long end with ... to increase readability.
 
+5)
+a/
 As we have seen we need 9 items, and indeed there are 9 integers in the decoded key, corresponding to 9 shown above with their meanings explained, with the first one being the verion 0. 
 
+b/
 The values of the integers are best shown in the Michael Holtstrom's decoded key, in heximal. The values of the integers are in decimal in the OSS Nokalva's ASN.1 Playground decoded key. The numbers are really large except the version number, which is 0 in decimal, and the public exponent, which is 65537 in decimal.
 
+c/
 This table shows the summary of the 9 integers.
 
     Function          value         Offsets   Length    DER
@@ -118,8 +124,7 @@ This table shows the summary of the 9 integers.
 9   coefficient       0x6ad860..    1572      3+192     02 81 C0 .. E7 47
 
 The first byte in every DER encoding of the integer is 02 which encodes INTEGER.
-The second byte is the length in hex of value that follows.
-The rest is the value.
+In the length column in the table above, the number on the left of + indicates the number of bytes in the header, and the numbers 385,193 is the number of bytes of the value.
 
 
 ======== PUBLIC KEY ========
@@ -128,6 +133,7 @@ Contents of id_rsa_homework.pub:
 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/i92IHQ5g+KZ6bgxoLA7E3Ixs5mzo/WsgqqhoPv2Sr50PE35s00uFARI7RTitlH694gBx+HiaHpWsZ93r2dnl75MMR3QAFLoBoEk0sBa6uGsdNScdpqX8OxEGpLkN10j32NN2M+6fLLgURWSsk3FIkjLOdCL9hOJd1/ADsgHjMuxHabpBKwPGWbFefBQpoJWpp44iytZ+JlNSpY7L2MNFje5ADEoGbRLr5yX4DwRCx9KQQQruczQO1oBJdWEKqDdF73xMlulr0/VBXnU5A37jazNSHXc5S1XcfLQBCK4abqxYtpXUNGY9hiZ/EQJ31n1UUTaDst0z1BcmXDUcwGKt8tAhFtR9mUpc+PTWQ5Wh4lNHvyNhTdyLRWCrgtSWILXBuZy9SPxcB9QKBvoqrt0JWqu+/JTBzljER3yiVTBc5FoaKjtCNtJULpG40Dqk029Yf56r0sqrh2Zz0CIJAmoXE+59YFlPWHgf1qC/uSWh0/WT7IWd8bG3B1SlP/MJuTk= user@host
 
+7)
 This file has the format ALGORITHM KEY COMMENT where the ALGORITHM is ssh-rsa and the COMMENT is user@host. The KEY is everything in between, in base64.
 
 Using the command to get the hex of the file:
@@ -173,6 +179,7 @@ rest 385 bytes      00 bf 8b .. b9 39                     = The key modulus
 
 
 ======== SANITY CHECK ========
+9)
 The key modulus in the private key is the same key modulus in the public key. The public exponent in the private key is the same exponent in the public key. That's what we want to see.
 
 Run this python script to see a few other relations checked out:
@@ -182,9 +189,12 @@ p = 0x00e566c7e6faa811d1b9c382d85751749ef679261755a70230bcf07ca84cb0399f47f33e30
 q = 0x00d5c172a1341f5f69fb06d9a4c6b1f63b6996878b9a28abe08752a2487475b8f1727d2ab5f00ae90cfa869612af4b5869a877e72d6ce010c619f7924aa3377d737ad3dd6f8f530da2d07dd25614f700052a7c290e677103c402107f6a164e925435fc7cc0220f2fef05d809206c78842a86345647bb3697722940b5771a5f94cbfad00224851e352372795d1ef35ea7348c60d5e1fd5cbb25226eeccd5f5b08166354ac747e1b95f6b1579692892a2be8c7da2f22bb0711a2183c7a4e5af9b61d
 d = 0x0094ba7e55fcf1b83bf9d0207903be09edb3ae59b485a657778212e0d6a8ea6da66c5653759bfc68ac2a8bc477d82d779afdc7693f1586576d1e1c933dceaf063132d7c3f60b4d30cac90e732934fd4118871b53b53ea1b24a6a76aae8e643a80121693bb0915c5c3df5e4cf88ff333107ff74f1b75d9fea397652802bee60e6d01884cec46f6b7defda9f0d555cb681d913b56579007491d922638ee794c287c50f128aaac023c337a8f27f19e057179f5e90e1e0220c53c49dab58de8a6e22f40800f5c1127627c56670c197ab276167303e09ad964d5c6ef19fec6d8a8d5f1f47817028f10364900c41628b9b3a9473c32e9228abef7465bb987a4c8e2743d0a534f6df02e7d7fdfb41b1db7d5ecb95303ff0bc728257d75014401e2970dfc6aad2219bede1260190698e3d50c38c38b6b191638b4e0130f5dce2f01a02eacb13015bab246a4b52b73063a4d0263d422fa036ed279e4747f3d381e6e14003719e69272ab9074382c5f59b090f90fa830b940f9fcb7bad82371f1e33e27b4031
 e = 0x010001
+n = 0x00bf8bdd881d0e60f8a67a6e0c682c0ec4dc8c6ce66ce8fd6b20aaa8683efd92af9d0f137e6cd34b8501123b4538ad947ebde20071f8789a1e95ac67ddebd9d9e5ef930c47740014ba01a04934b016bab86b1d35271da6a5fc3b1106a4b90dd748f7d8d37633ee9f2cb8144564ac9371489232ce7422fd84e25dd7f003b201e332ec4769ba412b03c659b15e7c1429a095a9a78e22cad67e265352a58ecbd8c3458dee400c4a066d12ebe725f80f0442c7d290410aee73340ed6804975610aa83745ef7c4c96e96bd3f5415e7539037ee36b33521d77394b55dc7cb40108ae1a6eac58b695d434663d86267f110277d67d54513683b2dd33d417265c351cc062adf2d02116d47d994a5cf8f4d64395a1e25347bf23614ddc8b4560ab82d49620b5c1b99cbd48fc5c07d40a06fa2aaedd095aabbefc94c1ce58c4477ca255305ce45a1a2a3b4236d2542e91b8d03aa4d36f587f9eabd2caab876673d02209026a1713ee7d60594f58781fd6a0bfb925a1d3f593ec859df1b1b70754a53ff309b939
 l = math.lcm(p-1,q-1)
 math.gcd(e,l) # wants to be 1
 e*d%l # wants to be 1
+
+p*q-n # wants to be 0
 
 e1 = 0x57c47523082f9971b632f932b065b7cac1de2416b56c8a47ff61bb2fe0f763746f60bf2040aa986b1fb2baacca921caa719f6b1a281a059ad4f94cea200e706458a78d97aee5fe4a670b24d82e3474a5223634520a26631837d7dab590d114dec6fab75210e3b53d71200321583f1198cecbfd166fd183a8b0874f329e6458f888d63920d36e401bcc864c2e0e420bfad00bc22494ab111c88d0ac8ff9938786287433821a84aa9766f40d22c778c8b6d6787cc79b70ab03b0978d138c7c34d9
 e1 - d%(p-1) # wants to be 0
@@ -193,7 +203,9 @@ e2 = 0x0f05df8690e13b95793d0c02d6ac1f4021b5a0a5211a86a9eb18d5aafdf460212808bffdb
 e2 - d%(q-1) # wants to be 0
 
 Explanation: 
-We find e, the public exponent to be 65537 and d, the private exponent from the private key. Then we find p and q from the private key. To get lambda(n), we calculate l = lambda(n) = math.lcm(p-1,q-1). It checks out that e*d mod l = 1.
+We find e, the public exponent to be 65537 and d, the private exponent from the private key. Then we find p and q from the private key. 
+We also confirm that n is p*q where we get n from both the private and public key.
+To get lambda(n), we calculate l = lambda(n) = math.lcm(p-1,q-1). It checks out that e*d mod l = 1.
 We get e1 from the private key. It should be the case that e1 = d mod (p-1). And that checks out.
 Similarly, we get d2 from the private key. And it is also the case that e2 = d mod (q-1).
 
