@@ -1,0 +1,93 @@
+Minh Pham
+
+========= SIMPLE COMMUNICATION SCENARIOS =========
+
+---------- 1 ----------
+Step 1: Alice and Bob use Diffie-Hellman to agree on a shared secret key K.
+It's very hard for Eve to solve this to find K.
+PITM is impossible so we for sure know Alice and Bob have the shared K.
+
+Step 2: Alice sends AES(K, M) to Bob.
+Eve doesn't have K so she wouldn't be able to do AES_D(K, M) to read it.
+
+Step 3: Bob does AES_D(K, M) as Bob knows K
+
+Tldr: Use Dffie-Hellman to agree on K, then send with AES
+
+---------- 2 ----------
+Step 1: Alice does H(M)
+This makes the message small enough to apply function E on it.
+
+Step 2: Alice computes SIG = E(S_A, H(M)) using the encryption function E.
+
+Step 3: Alice sends M || SIG to Bob.
+
+Step 4: Bob receives something. Call what Bob received RECEIVED = M_RECEIVED || SIG_RECEIVED.
+
+Step 5: Bob checks if H(M_RECEIVED) == D(P_A, SIG_RECEIVED) using the decryption function D.
+If true, then no Mal.
+If false, then the message is corrupted by Mal.
+
+Tldr: Use the encryption/decryption function for Bob to check if the message has been modified by Mal.
+
+---------- 3 ----------
+Step 1: Alice and Bob use Diffie-Hellman to agree on a shared secret key K.
+It's very hard for Eve to solve this to find K.
+PITM is impossible so we for sure know Alice and Bob have the shared K.
+
+Step 2: Alice does H(M)
+This makes the message small enough to apply function E on it.
+
+Step 2: Alice computes SIG = E(S_A, H(M)) using the encryption function E.
+
+Step 3: Alice sends AES(K, M) || SIG to Bob.
+Eve doesn't have K so she wouldn't be able to do AES_D(K, M) to read it.
+
+Step 4: Bob receives something. Call what Bob received RECEIVED = SOMETHING || SIG_RECEIVED.
+
+Step 5: Bob does AES_D(K, SOMETHING) as Bob knows K to get M_RECEIVED = AES_D(K, SOMETHING).
+
+Step 6: Bob checks if H(M_RECEIVED) == D(P_A, SIG_RECEIVED) using the decryption function D.
+If true, then Bob can be sure the message is what Alice sent.
+If false, then the message is corrupted by Mal.
+Eve could never have read it.
+
+Tldr: Use Diffie Hellman to agree on K, then send the encryption of AES so that Eve can't read while Mal can't modify.
+
+========= QUESTIONS ABOUT BREAKING SECURITY =========
+
+---------- 4 ----------
+CLAIM 1: Alice claims that there's a Mal. Mal intercepts the Diffie-Hellman process to become Eve and read the SIG that Alice sends to Bob. Then, Mal sends Bob a fake contract as if Mal was Alice. Now, having the fake contract and SIG that Alice sends, Mal can come up with a P_A so that Bob would verify the fake contract to be legitimate. Then, Mal sends Bob the fake P_A (by acting like CA or some other ways). Bob then goes on to verify the fake contract to be uncorrupted.
+
+This is not very plausible because in real life it's very hard to intercept the certificate's issuer communication with Bob, because certificate authority is usually highly credible and trusted.
+
+CLAIM 2: Alice claims that her private key got stolen (such as when she stored her key in a file and got hacked, or someone tricked her into revealing the private key).
+
+This is highly plausible because everyone can be careless and gullible, and once someone loses their private key, anyone can fake their signature.
+
+CLAIM 3: Alice claims that she got 5-dollar-wrench attacked and that someone forced her to send that contract.
+
+This is plausible and not at the same time. If it's true then it's hard to disprove, but it's also hard to believe because anyone can claim it like that.
+
+---------- 5 ----------
+CA would use this formula to compute SIG_CA: 
+SIG_CA = E(S_CA, H("bob.com" || P_B))
+
+---------- 6 ----------
+It is not enough for Alice to believe she's talking to Bob because some Mal might be in the middle to modify things as long as Mal doesn't touch SIG_CA.
+
+To make sure, one way is for Alice to send Bob something, let's say it's a random number R, encrypted with whatever P_B she received from Cert_B, and P_A, also encrypted with the P_B she recieved. Essentially, Alice sends Bob E(P_B, R) || E(P_B, P_A). That's step 1.
+
+Bob receives CIPHERTEXT_R || CIPHERTEXT_P_A. Bob now can use S_B to do D(S_B, CIPHERTEXT_R) and D(S_B, CIPHERTEXT_P_A) to learn about R and P_A. If Alice received the correct P_B, then the R that Bob now has must match the R that Alice sent. That's step 2.
+
+Bob now must send that R back, encrypted with P_A. That's step 3.
+
+Alice now received CIPHERTEXT_R. If nothing was tempered with, Alice would be able to do D(S_A, CIPHERTEXT_R) to get the same original R. Because Mal doesn't have S_B, there is no way a Mal can be in the middle and fake the ciphertext of R that Alice sends. And Because Mal doesn't have S_A, there is not way Mal can be in the middle and fake the cipher text of R that Bob sends back. 
+
+---------- 7 ----------
+Two ways that Mal can play the system:
+1/ Identity theft: Mal can just steal Bob's identity to convince Certificate Authority that Mal is Bob. Then CA would confirm to Alice that Mal is Bob.
+
+2/ Mal can just pull the 5-dollar-wrench attack and steal S_B. P_B is already publicly available.
+ 
+
