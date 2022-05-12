@@ -1,0 +1,68 @@
+Minh Pham
+
+Part 1
+Total time: 0m0.383s
+Number of hashes computed: 267751
+Passwords cracked: 2805
+Time per hash computed: 0.00000143s
+Time per password cracked: 0.000136s
+Passwords cracked per number of hashes computed: 0.01 passwords cracked per hash (total # passwords / total # hashes)
+
+Part 2
+Total time: 693m34.937s
+Number of hashes computed: 8,000,000,000
+Passwords cracked: 300
+Time per hash computed: 0.0000014s
+Time per password cracked: 138.71s
+Passwords cracked per number of hashes computed: 0.000000001 passwords cracked per hash
+
+Part 3
+Total time: 9m11.708s
+Number of hashes computed: 373448547
+Passwords cracked: 2805
+Time per hash computed: 0.0000014s
+Time per password cracked: 0.19s
+Passwords cracked per number of hashes computed: 0.0000074 passwords cracked per hash
+
+Analysis:
+1) Did your time per hash computed change between phases? By what factor? Why?
+
+Based on the results, we see that the time per has computed stays the same in all three parts. This makes sense because we are using the same word banks accorss all three parts. And hashing is a deterministic process, so we should expect the same behavior throughout given the same word.
+
+2) Did your time per password crack change between phases? By what factor? Why?
+[number and explanation]
+Based on the results we see that they change a lot. 
+Part 1 is really fast, with 0.000136s to crack a password on average. 
+For part 2, it takes up to 138.71s to crack a password on average, that is 1019926 times slower than that of part 1.
+For part 3, it takes up to 0.19 to crack a password on average, that is 730 times faster than that of part 2, and 1397 times slower than that of part 1.
+Part 1 needs to precompute the hashes of fewer passwords, part 3 needs to precompute a decent amount of digests, and part 2 requires a humongous amount of digests.
+
+
+3) Suppose you wanted to precompute all the possible password hashes for each
+so you could just look up the password in a table indexed by the hash. How much
+memory would be required for each phase?
+
+Phase 1:
+There is 267751 hashes, and the same amount of words. 
+Each hash takes 256 bits, so we need 267751*256/8 = 8568032 bytes.
+Each word takes 16 bytes, so in total all words take 267751*16 = 4284016 bytes. 
+The mapping overhead takes 267751*32 = 8568032 bytes. 
+So in total we need 8568032 + 4284016 + 8568032 = 21420080 bytes. 
+
+Phase 2:
+There is 267751 * 267751 = 71690598001 hashes and the same amount of words.
+Each hash takes 256 bits, so we need 71690598001*256/8 = 2 * 10^12 bytes roughly.
+Each word takes 16 bytes, so in total all words take 71690598001*16 = 1.14*10^12.
+The mapping overhead takes 32*71690598001 = 2 * 10^12 bytes.
+So in total we need 2 * 10^12 + 1.14*10^12 + 2 * 10^12 = 5.14*10^12 bytes. 
+
+Phase 3:
+There is 267751*2805 = 751041555 hashes, because each word pairs with a salt.
+Each hash takes 256 bits, so we need 751041555*256/8 = 24033329760 bytes.
+No mapping is needed, so in total we need 24033329760 bytes.
+
+4) Give 3-4 reasons we should store password hashes and not the passwords themselves. Think in terms of threats, who the attackers might be, etc.
+- Someone who gains/has access to the password database cannot just know your password
+- The person providing the service themselves (that requires users to have passwords) want to establish trusts with their users by saying I don't have your passwords.
+- Moving the data accross the network (for reasons such as updating service, security), doesn't run the risk of someone eavesdrop or require hashing everything.
+- There are a lot of ways to attack the database, like sql injection, or even in real life threats, so storing the real passwords is not safe.
